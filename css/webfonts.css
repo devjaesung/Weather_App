@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'notoSansKr';
+    src: url(../webfonts/NotoSansKR-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Material Icons Outlined';
+    src: url('../webfonts/MaterialIconsOutlined-Regular.otfNotoSansKR-Black.otf');
+    src: url('../webfonts/MaterialIconsOutlined-Regular.otfNotoSansKR-Black.otf?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIconsOutlined-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIconsOutlined-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIconsOutlined-Regular.otf') format('truetype'),
+        url('../webfonts/MaterialIconsOutlined-Regular.svg#MaterialIconsOutlined-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    src: url('../webfonts/MaterialIcons-Regular.otfNotoSansKR-Black.otf');
+    src: url('../webfonts/MaterialIcons-Regular.otfNotoSansKR-Black.otf?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIcons-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIcons-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIcons-Regular.ttf') format('truetype'),
+        url('../webfonts/MaterialIcons-Regular.svg#MaterialIcons-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Material Icons Round';
+    src: url('../webfonts/MaterialIconsRound-Regular.otfNotoSansKR-Black.otf');
+    src: url('../webfonts/MaterialIconsRound-Regular.otfNotoSansKR-Black.otf?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIconsRound-Regular.otf') format('truetype'),
+        url('../webfonts/MaterialIconsRound-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIconsRound-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIconsRound-Regular.svg#MaterialIconsRound-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Material Icons Sharp';
+    src: url('../webfonts/MaterialIconsSharp-Regular.otfNotoSansKR-Black.otf');
+    src: url('../webfonts/MaterialIconsSharp-Regular.otfNotoSansKR-Black.otf?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIconsSharp-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIconsSharp-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIconsSharp-Regular.otf') format('truetype'),
+        url('../webfonts/MaterialIconsSharp-Regular.svg#MaterialIconsSharp-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Material Icons Two Tone';
+    src: url('../webfonts/MaterialIconsTwoTone-Regular.otfNotoSansKR-Black.otf');
+    src: url('../webfonts/MaterialIconsTwoTone-Regular.otfNotoSansKR-Black.otf?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIconsTwoTone-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIconsTwoTone-Regular.otf') format('otf'),
+        url('../webfonts/MaterialIconsTwoTone-Regular.otf') format('truetype'),
+        url('../webfonts/MaterialIconsTwoTone-Regular.svg#MaterialIconsTwoTone-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/** outlined **/
+.material-icons-outlined{
+    font-family: 'Material Icons Outlined';
+    font-weight:normal;
+    font-style:normal;
+    font-size: 24px;
+    display:inline-block;
+    line-height:1;
+    text-transform:none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* ì›¹í‚· ì‚¬ìš© ë¸Œë¼ìš°ì € ìš© */
+    -webkit-font-smoothing: antialiased;
+    /* ì‚¬íŒŒë¦¬, í¬ë¡¬ìš© */
+    text-rendering: optimizeLegibility;
+    /* ìµìŠ¤í”Œë¡œëŸ¬ìš© */
+    font-feature-settings: 'liga';
+}
+
+.material-icons{
+    font-family: 'Material Icons';
+    font-weight:normal;
+    font-style:normal;
+    font-size: 24px;
+    display:inline-block;
+    line-height:1;
+    text-transform:none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* ì›¹í‚· ì‚¬ìš© ë¸Œë¼ìš°ì € ìš© */
+    -webkit-font-smoothing: antialiased;
+    /* ì‚¬íŒŒë¦¬, í¬ë¡¬ìš© */
+    text-rendering: optimizeLegibility;
+    /* ìµìŠ¤í”Œë¡œëŸ¬ìš© */
+    font-feature-settings: 'liga';
+}
+
+/** round **/
+.material-icons-round{
+    font-family: 'Material Icons Round';
+    font-weight:normal;
+    font-style:normal;
+    font-size: 24px;
+    display:inline-block;
+    line-height:1;
+    text-transform:none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* ì›¹í‚· ì‚¬ìš© ë¸Œë¼ìš°ì € ìš© */
+    -webkit-font-smoothing: antialiased;
+    /* ì‚¬íŒŒë¦¬, í¬ë¡¬ìš© */
+    text-rendering: optimizeLegibility;
+    /* ìµìŠ¤í”Œë¡œëŸ¬ìš© */
+    font-feature-settings: 'liga';
+}
+
+/* sharp */
+.material-icons-sharp{
+    font-family: 'Material Icons Sharp';
+    font-weight:normal;
+    font-style:normal;
+    font-size: 24px;
+    display:inline-block;
+    line-height:1;
+    text-transform:none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* ì›¹í‚· ì‚¬ìš© ë¸Œë¼ìš°ì € ìš© */
+    -webkit-font-smoothing: antialiased;
+    /* ì‚¬íŒŒë¦¬, í¬ë¡¬ìš© */
+    text-rendering: optimizeLegibility;
+    /* ìµìŠ¤í”Œë¡œëŸ¬ìš© */
+    font-feature-settings: 'liga';
+}
+
+/* twotone */
+.material-icons-twotone{
+    font-family: 'Material Icons Two Tone';
+    font-weight:normal;
+    font-style:normal;
+    font-size: 24px;
+    display:inline-block;
+    line-height:1;
+    text-transform:none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* ì›¹í‚· ì‚¬ìš© ë¸Œë¼ìš°ì € ìš© */
+    -webkit-font-smoothing: antialiased;
+    /* ì‚¬íŒŒë¦¬, í¬ë¡¬ìš© */
+    text-rendering: optimizeLegibility;
+    /* ìµìŠ¤í”Œë¡œëŸ¬ìš© */
+    font-feature-settings: 'liga';
+}

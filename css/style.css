@@ -1,0 +1,78 @@
+@import url('reset.css');
+@import url('webfonts.css');
+@import url('weather-icons.css');
+@import url('weather-icons-wind.css');
+@import url('bootstrap-grid.min.css');
+
+body{
+    background-color: rgb(90,173,237);
+    font-size: 16px;
+    font-family: notoSansKr, sans-serif;
+    color: #fff;
+    font-weight: 400;
+}
+nav{
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.text-center{
+    text-align: center;
+}
+.searchBox{
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 1em;
+}
+.searchBox input[type=search]{
+    width: 1px;
+}
+#search{
+    border: none;
+    background-color: transparent;
+}
+#search:focus{
+    outline: none;
+}
+h1.city-title{
+    font-size: 1.7em;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.margin-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+#iconbox,#nowtemp{
+    height: 100px;
+}
+#iconbox{
+    text-align: left;
+}
+#nowtemp{
+    font-size: 4em;
+    line-height: 1.2em;
+    text-align: left;
+    font-weight: 700;
+}
+#minmaxtemp{
+    margin-bottom: 10px;
+}
+.py-20{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.light-blue{
+    background-color: rgba(255,255,255,.3);
+}
+.light-blue li{
+    line-height: 1.8em;
+}
+.material-icons{
+    width: 16px;
+    font-size: 20px;
+}

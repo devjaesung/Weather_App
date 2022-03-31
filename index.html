@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <nav>
+            <form name="searchForm" id="searchForm">
+                <div class="searchBox">
+                    <input type="search" name="search" placeholder="검색" id="search">
+                    <span class="material-icons">search</span>
+                </div>
+            </form>
+        </nav>
+        <h1 class="city-title">
+            <span class="material-icons-outlined">location_on</span>
+            GIMPO-SI
+        </h1>
+        <div class="row col-9 margin-auto">
+            <div class="col-6" id="iconbox">
+                <img src="images/01d.svg" alt="01d">
+            </div>
+            <div class="col-6" id="nowtemp">19&deg;</div>
+            <div class="col-12 text-center">
+                <p id="minmaxtemp">6&deg;/14&deg;</p>
+                <p id="desc">Description</p>
+            </div>
+        </div>
+
+        <div class="row light-blue py-20">
+            <div class="col-1"></div>
+            <div class="col-5">
+                <ul>
+                    <li><i class="wi wi-sunrise"></i>
+                        Sunrise : </li>
+                    <li><i class="wi wi-sunset"></i>
+                        Sunset : </li>
+                    <li><i class="wi wi-windy"></i>
+                        Wind : </li>
+                </ul>
+            </div>
+            <div class="col-5 col-offset-1">
+                <ul>
+                    <li><i class="wi wi-humidity"></i>
+                        Humidity : </li>
+                    <li><i class="wi wi-cloud"></i>
+                        Cloud : </li>
+                    <li><i class="wi wi-thermometer"></i>
+                        Feels like : </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

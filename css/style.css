@@ -20,11 +20,22 @@ nav{
     text-align: center;
 }
 .searchBox{
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(255,255,255,0);
     border-radius: 1em;
+    padding: 3px;
 }
 .searchBox input[type=search]{
     width: 1px;
+    transition: all .3s;
+}
+.searchBox.active input[type=search]{
+    width: 150px;
+}
+.searchBox.active{
+    border: 1px solid rgba(255,255,255,1);
+}
+.search{
+    margin-right: 5px;
 }
 #search{
     border: none;
@@ -38,7 +49,10 @@ h1.city-title{
     font-weight: 700;
     text-align: center;
     margin-top: 2em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
+}
+.ntime{
+    margin-bottom: 1.2em;
 }
 .margin-auto{
     margin-left: auto;

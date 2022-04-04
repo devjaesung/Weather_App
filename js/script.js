@@ -71,10 +71,12 @@ function getWeather(lat, lon, city){
       console.log('설명',rs.list[0].weather[0].description);
       //7.일출
       let nowSunrise = new Date(rs.city.sunrise*1000);
+      let sunrise = `${nowSunrise.getHours()}:${nowSunrise.getMinutes()}`;
       console.log('일출',nowSunrise);
       //8.일몰
       let nowSunset = new Date(rs.city.sunset*1000);
       console.log('일몰',nowSunset);
+      let sunset = `${nowSunset.getHours()}:${nowSunset.getMinutes()}`;
       //9.바람
       console.log('바람',rs.list[0].wind);
       //10.습도
@@ -84,5 +86,11 @@ function getWeather(lat, lon, city){
       //12.체감온도
       console.log('체감온도',rs.list[0].main.feels_like);
 
+      document.getElementById('sunrise').innerHTML = sunrise;
+      document.getElementById('sunset').innerHTML = sunset;
+      document.getElementById('wind').innerHTML = rs.list[0].wind.speed;
+      document.getElementById('cloud').innerHTML = rs.list[0].clouds.all + '%';
+      document.getElementById('humidity').innerHTML = rs.list[0].main.humidity + '%';
+      document.getElementById('feel').innerHTML = rs.list[0].main.feels_like + '&deg;';
    });
 }

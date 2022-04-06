@@ -92,5 +92,40 @@ function getWeather(lat, lon, city){
       document.getElementById('cloud').innerHTML = rs.list[0].clouds.all + '%';
       document.getElementById('humidity').innerHTML = rs.list[0].main.humidity + '%';
       document.getElementById('feel').innerHTML = rs.list[0].main.feels_like + '&deg;';
+
+      /*swiper*/
+      let html =""
+      //for(let i in rs.list)는 배열 길이가 너무 길어서 7개만 나오도록 바꿈
+      for(let i = 0;i<8; i++){
+         let minTemp =rs.list[0].main.temp_min;
+         minTemp = minTemp.toFixed(1);
+         let maxTemp =rs.list[0].main.temp_max;
+         maxTemp = maxTemp.toFixed(1);
+         let dayTime = new Date(rs.list[i].dt*1000);
+         let dayHours = (dayTime.getHours() > 12)? `PM ${dayTime.getHours() -12}`:`AM ${dayTime.getHours()}`
+         let dayDate = dayTime.getDate()+ "일 " + dayHours +"시";
+         html +=`
+         <div class="swiper-slide">
+         <div class="dayWeather">
+             <p class="daydate">${dayDate}</p>
+             <img src="images/${rs.list[i].weather[0].icon}.svg" alt="01d">
+             <p id="daytemp">${minTemp}&deg;/${maxTemp}&deg;</p>
+             <p id="daydesc">${rs.list[i].weather[0].description}</p>
+         </div>
+         </div>
+         `;
+      }
+      document.getElementById('rep').innerHTML = html;
+
+      //swiper demos
+      var swiper = new Swiper(".mySwiper", {
+         slidesPerView: 3,
+         spaceBetween: 30,
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true,
+         }
+       });
+
    });
 }

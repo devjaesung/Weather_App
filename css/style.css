@@ -90,3 +90,62 @@ h1.city-title{
     width: 16px;
     font-size: 20px;
 }
+/*dayweather */
+.dayWeather{
+    width: 100px;
+    padding: 15px;
+    background-color: rgba(255,255,255,.3);
+    color: #555;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(255,255,255,.15),
+                0 0 5px 0 rgba(0,0,0,.2);
+                margin-bottom: 30px;
+}
+.dayWeater p{
+    margin: 5px;
+}
+.daydate{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.dayWeather img{
+    height: 50px;
+}
+.daytemp{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+/*swiper demos css*/
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  margin: 0;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* /swipe demos css*/

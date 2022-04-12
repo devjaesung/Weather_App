@@ -9,9 +9,18 @@ search.addEventListener("click", function(){
    document.getElementById("search").focus();
 });
 
-document.getElementById("search").addEventListener("blur", function(){ //blur = focus에서 나왔을때
-   searchBox.classList.remove("active");//focus에서 나오면 active를 지워줌
-});
+//검색창에 글자 입력 받기
+document.searchForm.addEventListener("keydown", (e) => {
+   let searchtxt = '';
+   if(e.code === "Enter") {
+      e.preventDefault();  //submit 기능을 막음
+      searchtxt = document.getElementById("search").value;
+      searchBox.classList.remove("active");
+      document.getElementById("search").value = '';
+   }  
+   getWeather('','', searchtxt);
+})
+
 
 //위치값 받아오기
 let myLat = 0, myLng = 0;
@@ -57,6 +66,7 @@ function getWeather(lat, lon, city){
        */
 
       //1.도시명
+      document.getElementsByClassName('city-title')[0].innerHTML = ' <span class="material-icons-outlined">location_on</span>'+rs.city.name.toUpperCase();
       console.log('도시명',rs.city.name);
       //2.시간
       let nowTime = new Date(rs.list[0].dt*1000); //<-- 유닉스타임을 시간으로 변환하는 방법
@@ -65,6 +75,7 @@ function getWeather(lat, lon, city){
       console.log('아이콘',rs.list[0].weather[0].icon);
       //4.현재온도
       console.log('현재온도',rs.list[0].main.temp);
+
       //5.최저온도,최고온도
       console.log('최저온도',rs.list[0].main.temp_min,'최고온도',rs.list[0].main.temp_max);
       //6.설명
@@ -86,6 +97,7 @@ function getWeather(lat, lon, city){
       //12.체감온도
       console.log('체감온도',rs.list[0].main.feels_like);
 
+      document.getElementById('nowtemp').innerHTML = rs.list[0].main.temp + '&deg;';
       document.getElementById('sunrise').innerHTML = sunrise;
       document.getElementById('sunset').innerHTML = sunset;
       document.getElementById('wind').innerHTML = rs.list[0].wind.speed;
@@ -95,7 +107,7 @@ function getWeather(lat, lon, city){
 
       /*swiper*/
       let html =""
-      //for(let i in rs.list)는 배열 길이가 너무 길어서 7개만 나오도록 바꿈
+      //for(let i in rs.list)는 배열이 너무 길어서(40개) 7개만 나오도록 바꿈
       for(let i = 0;i<8; i++){
          let minTemp =rs.list[0].main.temp_min;
          minTemp = minTemp.toFixed(1);
@@ -109,7 +121,7 @@ function getWeather(lat, lon, city){
          <div class="dayWeather">
              <p class="daydate">${dayDate}</p>
              <img src="images/${rs.list[i].weather[0].icon}.svg" alt="01d">
-             <p id="daytemp">${minTemp}&deg;/${maxTemp}&deg;</p>
+             <p id="daytemp">${rs.list[i].main.temp}&deg;</p>
              <p id="daydesc">${rs.list[i].weather[0].description}</p>
          </div>
          </div>
@@ -124,7 +136,7 @@ function getWeather(lat, lon, city){
          pagination: {
            el: ".swiper-pagination",
            clickable: true,
-         }
+         },
        });
 
    });
